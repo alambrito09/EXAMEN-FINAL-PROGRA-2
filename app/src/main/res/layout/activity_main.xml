@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/asistencia2"
+    tools:context=".MainActivity">
+
+    <!-- Título que dice Bienvenido a la asistencia mecánica -->
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="#DDF6EFEF"
+        android:text="Bienvenido a la asistencia mecanica"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Campo para ingresar el número -->
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#DDF6EFEF"
+        android:backgroundTint="#DCDDE9"
+        android:hint="Ingrese su número"
+        android:inputType="number"
+        android:textColor="#0D0C0C"
+        android:textColorHighlight="#EFA8A8"
+        android:textColorHint="#100F0F"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitulo" />
+
+    <!-- Campo para ingresar el nombre -->
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-200dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#E0D5D5E2"
+        android:hint="Ingrese su nombre"
+        android:inputType="textPersonName"
+        android:textColor="#0F0E0E"
+        android:textColorHighlight="#0D0C0C"
+        android:textColorHint="#0D0C0C"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/buttonSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+    <!-- Botón para enviar la información -->
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#E6FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:foregroundTint="#5D1D1D"
+        android:text="@string/solicitar_servicios"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#090909"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextName" />
+
+    <Button
+        android:id="@+id/buttonsalir"
+        android:layout_width="127dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="73dp"
+        android:backgroundTint="#F4E5E5"
+        android:text="@string/salir"
+        android:textColor="#000000"
+    android:textColorHighlight="#141212"
+    android:textColorHint="#181414"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/buttonSubmit"
+    app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

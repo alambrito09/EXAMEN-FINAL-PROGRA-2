@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapa3="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/conbustible"
+    android:gravity="start"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#A6050505"
+        android:backgroundTint="#181414"
+        android:baselineAligned="false"
+        android:text="Servicio de Combustible"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#EEFFFFFF"
+        android:text="@string/tipo_de_combustible"
+        android:textColor="#000000" />
+
+
+    <CheckBox
+        android:id="@+id/checkBoxMagna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="#000000"
+        android:buttonTint="#FFFFFF"
+        android:text="@string/regular"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPremium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="#050505"
+        android:buttonTint="#FFFFFF"
+        android:text="@string/premium"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#EAFFFFFF"
+        android:text="@string/tipo_de_di_sel"
+        android:textColor="#000000" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDieselA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="#DE000000"
+        android:buttonTint="#FFFFFF"
+        android:text="@string/diesel_a"
+        android:textColor="#FFFFFF" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBiodiesel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="#000000"
+        android:buttonTint="#F2FFFFFF"
+        android:text="@string/biodiesel"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#F6F3F3"
+        android:text="@string/total_de_galones"
+        android:textAllCaps="false"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextGalones"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#E0FFFFFF"
+        android:hint="@string/ingresa_el_total_de_galones"
+        android:inputType="numberDecimal"
+        android:textColor="#DE000000"
+        android:textColorHighlight="#121111"
+        android:textColorHint="#121111"
+        android:textSize="20sp" />
+
+
+    <!-- Botones centrados y separados -->
+
+    <Button
+        android:id="@+id/btnSolicitarCombustible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#CDFFFFFF"
+        android:text="@string/solicitar_servicio_de_combustible"
+        android:textColor="#141313" />
+
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#D9FFFFFF"
+        android:insetTop="4dp"
+        android:text="@string/regresar"
+        android:textColor="#141313" />
+
+    <fragment
+        android:id="@+id/mapa3"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        mapa3:cameraZoom="10"
+        mapa3:uiRotateGestures="true"
+        mapa3:uiZoomControls="true" />
+
+    <Button
+        android:id="@+id/ubicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F4F1F1"
+        android:text="ubicacion"
+        android:textColor="#0B0A0A"
+        android:textColorHighlight="#161515"
+        android:textColorHint="#0F0D0D" />
+
+
+</LinearLayout>

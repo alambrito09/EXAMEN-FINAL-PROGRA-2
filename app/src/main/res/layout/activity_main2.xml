@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu"
+    tools:context=".SecondActivity">
+
+    <!-- Título que dice "Menú de Servicios" -->
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#A017D9"
+        android:text="MENU DE SERVICIOS"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botón para Servicio de Grúa -->
+
+    <!-- Botón para Servicio Mecánico -->
+
+    <!-- Botón para Servicio de Combustible -->
+
+    <!-- Botón para Regresar al MainActivity -->
+    <Button
+        android:id="@+id/buttonServicioGrua"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:background="#E9E4E4"
+        android:backgroundTint="#7B1FA2"
+        android:text="SERVICIO DE GRUA"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitulo" />
+
+    <Button
+        android:id="@+id/buttonServicioMecanico"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:background="#A716E6"
+        android:backgroundTint="#7B1FA2"
+        android:text="SERVICIO MECANICO"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonServicioGrua" />
+
+    <Button
+        android:id="@+id/buttonServicioCombustible"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="16dp"
+        android:background="#9616CC"
+        android:backgroundTint="#C5FDFDFD"
+        android:text="SERVICIO DE COMBUSTIBLE"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonServicioMecanico" />
+
+    <Button
+        android:id="@+id/buttonRegresar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="16dp"
+        android:background="#BCBABD"
+        android:backgroundTint="#C5E7E5E5"
+        android:text="@string/regresar_al_menu"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonServicioCombustible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

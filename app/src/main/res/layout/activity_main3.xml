@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mapa2="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/servicio45"
+    android:orientation="vertical"
+    android:padding="48dp">
+
+    <!-- Título del Servicio Mecánico -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:text="Servicio Mecánico"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <!-- EditText para Descripción del Problema -->
+
+    <!-- EditText para Tipo de Vehículo -->
+    <EditText
+        android:id="@+id/editTextDescripcionProblema"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="#E0FDF9F9"
+        android:hint="Descripción del problema"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHighlight="#0D0C0C"
+        android:textColorHint="#070707"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/editTextTipoVehiculo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="#E0FFFFFF"
+        android:hint="Tipo de vehículo"
+        android:inputType="text"
+        android:text="Marca de vehiculo"
+        android:textColor="#121111"
+        android:textColorHighlight="#181616"
+        android:textColorHint="#100F0F"
+        android:textSize="18sp" />
+
+    <!-- EditText para Modelo de Vehículo -->
+
+    <!-- EditText para Número de Placa -->
+    <EditText
+        android:id="@+id/editTextModeloVehiculo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="#D0FFFFFF"
+        android:hint="Modelo de vehículo"
+        android:inputType="text"
+        android:textColor="#181616"
+        android:textColorHighlight="#121111"
+        android:textColorHint="#090808"
+        android:textSize="18sp" />
+
+    <!-- Botón para Confirmar Servicio (centrado) -->
+    <EditText
+        android:id="@+id/editTextNumeroPlaca"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="#E0FFFFFF"
+        android:hint="Número de placa"
+        android:inputType="text"
+        android:textColor="#161313"
+        android:textColorHighlight="#121111"
+        android:textColorHint="#121111"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnConfirmarServicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#83FFFFFF"
+        android:minHeight="48dp"
+        android:text="Confirmar Servicio"
+        android:textColor="#0B0B0B" />
+
+
+    <!-- Espacio para empujar el botón "Regresar" al fondo -->
+
+    <fragment
+        android:id="@+id/mapa2"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        mapa2:cameraZoom="10"
+        mapa2:uiRotateGestures="true"
+        mapa2:uiZoomControls="true" />
+
+    <Button
+        android:id="@+id/buttonubicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E0FFFFFF"
+        android:minHeight="48dp"
+        android:text="Ubicación del vehículo"
+        android:textColor="#100F0F" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Botón para Ubicación del Vehículo -->
+
+    <!-- Botón para Regresar (colocado en la parte inferior) -->
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E0FFFFFF"
+        android:minHeight="48dp"
+        android:text="Regresar"
+        android:textColor="#0D0C0C" />
+
+</LinearLayout>

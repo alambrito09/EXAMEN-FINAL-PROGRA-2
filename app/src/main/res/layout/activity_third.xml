@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapa="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grua"
+    tools:context=".ThirdActivity">
+
+    <!-- Título encima de Marca del carro -->
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#E2FFFFFF"
+        android:text="Servicio de grúa"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- EditText para Marca del carro -->
+    <EditText
+        android:id="@+id/editTextMarca"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_launcher_background"
+        android:backgroundTint="#E2FFFFFF"
+        android:hint="@string/marca_del_carro"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textColorHint="@color/black"
+        android:textColorLink="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/editTextModelo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitulo" />
+
+    <!-- EditText para Modelo del carro -->
+    <EditText
+        android:id="@+id/editTextModelo"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/grua"
+        android:backgroundTint="#E2FFFFFF"
+        android:hint="@string/modelo"
+        android:shadowColor="#491010"
+        android:textColor="#000000"
+        android:textColorHint="#090808"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextMarca" />
+
+    <!-- EditText para Placa del carro -->
+    <EditText
+        android:id="@+id/editTextPlaca"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_launcher_background"
+        android:backgroundTint="#E2FFFFFF"
+        android:drawableTint="#EDE9E9"
+        android:hint="@string/placa_del_carro"
+        android:textColor="#0F0F0F"
+        android:textColorHint="#050505"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextModelo" />
+
+    <!-- EditText para Color del carro -->
+    <EditText
+        android:id="@+id/editTextColor"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_launcher_background"
+        android:backgroundTint="#E2FFFFFF"
+        android:hint="@string/color_del_carro"
+        android:textColor="#000000"
+        android:textColorHint="#0B0B0B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPlaca" />
+
+    <!-- Botón para Enviar -->
+    <Button
+        android:id="@+id/buttonEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#E2FFFFFF"
+        android:text="Solicitar grúa"
+        android:textColor="#121111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextColor" />
+
+    <!-- Botón para Tomar Foto del carro -->
+
+    <fragment
+        android:id="@+id/mapa"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUbicacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTomarFoto"
+        app:layout_constraintVertical_bias="0.0"
+        mapa:cameraZoom="10"
+        mapa:uiRotateGestures="true"
+        mapa:uiZoomControls="true" />
+
+    <Button
+        android:id="@+id/buttonTomarFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#E2FFFFFF"
+        android:text="@string/tomar_foto_del_carro"
+        android:textColor="#121111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonEnviar" />
+
+    <!-- Botón para Ubicación del carro (colocado al extremo inferior) -->
+    <Button
+        android:id="@+id/buttonUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E2FFFFFF"
+        android:text="@string/ubicaci_n_del_carro"
+        android:textColor="#121111"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRegresarMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Botón para Regresar al menú de opciones (colocado al extremo inferior) -->
+    <Button
+        android:id="@+id/buttonRegresarMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E2FFFFFF"
+        android:text="@string/regresar_al_men_de_opciones"
+        android:textColor="#121111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
